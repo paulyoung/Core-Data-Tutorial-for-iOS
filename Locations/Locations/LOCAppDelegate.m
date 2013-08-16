@@ -7,6 +7,7 @@
 //
 
 #import "LOCAppDelegate.h"
+#import "LOCTableViewController.h"
 
 @implementation LOCAppDelegate
 
@@ -17,7 +18,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    LOCTableViewController *tableViewController = [[LOCTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    if (!managedObjectContext) {
+        // Handle the error
+    }
+    
+    tableViewController.managedObjectContext = managedObjectContext;
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    self.window.rootViewController = navigationController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
