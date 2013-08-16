@@ -117,4 +117,29 @@
 
  */
 
+#pragma mark - CLLocationManagerDelegate
+
+- (CLLocationManager *)locationManager
+{
+    if (_locationManager != nil) {
+        return _locationManager;
+    }
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    _locationManager.delegate = self;
+    
+    return _locationManager;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    _addButton.enabled = YES;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    _addButton.enabled = NO;
+}
+
 @end
