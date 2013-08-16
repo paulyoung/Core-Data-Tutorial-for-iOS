@@ -24,6 +24,7 @@
 		DA5EAEFF17BDA43E009AE9CF /* LocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5EAEFE17BDA43E009AE9CF /* LocationsTests.m */; };
 		DA5EAF0917BDA4E4009AE9CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5EAF0817BDA4E4009AE9CF /* CoreLocation.framework */; };
 		DA5EAF0C17BDABF0009AE9CF /* LOCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5EAF0B17BDABF0009AE9CF /* LOCTableViewController.m */; };
+		DAABB2A017BDB91000FF5AA2 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DAABB29F17BDB91000FF5AA2 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		DA5EAF0817BDA4E4009AE9CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DA5EAF0A17BDABF0009AE9CF /* LOCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOCTableViewController.h; sourceTree = "<group>"; };
 		DA5EAF0B17BDABF0009AE9CF /* LOCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOCTableViewController.m; sourceTree = "<group>"; };
+		DAABB29E17BDB91000FF5AA2 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		DAABB29F17BDB91000FF5AA2 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				DA5EAF0B17BDABF0009AE9CF /* LOCTableViewController.m */,
 				DA5EAEEA17BDA43E009AE9CF /* Images.xcassets */,
 				DA5EAEE717BDA43E009AE9CF /* Locations.xcdatamodeld */,
+				DAABB29E17BDB91000FF5AA2 /* Event.h */,
+				DAABB29F17BDB91000FF5AA2 /* Event.m */,
 				DA5EAEDC17BDA43E009AE9CF /* Supporting Files */,
 			);
 			path = Locations;
@@ -260,6 +265,7 @@
 			files = (
 				DA5EAF0C17BDABF0009AE9CF /* LOCTableViewController.m in Sources */,
 				DA5EAEE217BDA43E009AE9CF /* main.m in Sources */,
+				DAABB2A017BDB91000FF5AA2 /* Event.m in Sources */,
 				DA5EAEE917BDA43E009AE9CF /* Locations.xcdatamodeld in Sources */,
 				DA5EAEE617BDA43E009AE9CF /* LOCAppDelegate.m in Sources */,
 			);
@@ -458,6 +464,7 @@
 				DA5EAF0417BDA43E009AE9CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA5EAF0517BDA43E009AE9CF /* Build configuration list for PBXNativeTarget "LocationsTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +473,7 @@
 				DA5EAF0717BDA43E009AE9CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
