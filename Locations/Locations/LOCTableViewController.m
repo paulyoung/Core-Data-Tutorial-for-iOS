@@ -32,7 +32,7 @@
     
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                    target:self
-                                                                   action:addEvent];
+                                                                   action:@selector(addEvent)];
     self.addButton.enabled = NO;
     self.navigationItem.rightBarButtonItem = self.addButton;
     
