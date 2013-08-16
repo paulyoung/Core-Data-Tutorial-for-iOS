@@ -134,12 +134,12 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    _addButton.enabled = YES;
+    self.addButton.enabled = YES;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    _addButton.enabled = NO;
+    self.addButton.enabled = NO;
 }
 
 @end
