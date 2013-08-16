@@ -46,28 +46,53 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.eventsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    
+    static NSDateFormatter *dateFormatter = nil;
+    
+    if (dateFormatter == nil) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    }
+    
+    
+    static NSNumberFormatter *numberFormatter = nil;
+    
+    if (numberFormatter == nil) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [numberFormatter setMaximumFractionDigits:3];
+    }
+    
+    
+    Event *event = (Event *)[self.eventsArray objectAtIndex:indexPath.row];
+    NSString *latLong = [NSString stringWithFormat:@"%@, %@", [numberFormatter stringFromNumber:event.latitude], [numberFormatter stringFromNumber:event.longitude]];
+    
+    cell.textLabel.text = [dateFormatter stringFromDate:event.creationDate];
+    cell.detailTextLabel.text = latLong;
+    
     
     return cell;
 }
@@ -152,8 +177,7 @@
     [self.eventsArray insertObject:event atIndex:0];
     
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0
-                                                inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                           withRowAnimation:UITableViewRowAnimationFade];
