@@ -37,7 +37,30 @@
     self.addButton.enabled = NO;
     self.navigationItem.rightBarButtonItem = self.addButton;
     
+    
     [self.locationManager startUpdatingLocation];
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event"
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creationDate" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    
+    NSError *error = nil;
+    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:fetchRequest error:&error] mutableCopy];
+    
+    if (mutableFetchResults == nil) {
+        // Handle the error
+    }
+    
+    self.eventsArray = mutableFetchResults;
 }
 
 - (void)didReceiveMemoryWarning
