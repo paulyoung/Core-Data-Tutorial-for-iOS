@@ -7,6 +7,7 @@
 //
 
 #import "LOCTableViewController.h"
+#import "Event.h"
 
 @interface LOCTableViewController ()
 
@@ -121,6 +122,47 @@
 }
 
  */
+
+
+- (void)addEvent
+{
+    CLLocation *location = [self.locationManager location];
+    
+    if (!location) {
+        return;
+    }
+    
+    
+    Event *event = (Event *)[NSEntityDescription insertNewObjectForEntityForName:@"Event"
+                                                          inManagedObjectContext:self.managedObjectContext];
+    
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    [event setLatitude:[NSNumber numberWithDouble:coordinate.latitude]];
+    [event setLongitude:[NSNumber numberWithDouble:coordinate.longitude]];
+    [event setCreationDate:[NSDate date]];
+    
+    
+    NSError *error = nil;
+    
+    if ([self.managedObjectContext save:&error] == NO) {
+        // Handle this error
+    }
+    
+    
+    [self.eventsArray insertObject:event atIndex:0];
+    
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0
+                                                inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                          withRowAnimation:UITableViewRowAnimationFade];
+    
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:YES];
+}
+
 
 #pragma mark - CLLocationManagerDelegate
 
