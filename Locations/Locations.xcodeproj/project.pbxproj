@@ -22,6 +22,7 @@
 		DA5EAEF517BDA43E009AE9CF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5EAED917BDA43E009AE9CF /* CoreData.framework */; };
 		DA5EAEFD17BDA43E009AE9CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5EAEFB17BDA43E009AE9CF /* InfoPlist.strings */; };
 		DA5EAEFF17BDA43E009AE9CF /* LocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5EAEFE17BDA43E009AE9CF /* LocationsTests.m */; };
+		DA5EAF0917BDA4E4009AE9CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5EAF0817BDA4E4009AE9CF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DA5EAEFA17BDA43E009AE9CF /* LocationsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocationsTests-Info.plist"; sourceTree = "<group>"; };
 		DA5EAEFC17BDA43E009AE9CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA5EAEFE17BDA43E009AE9CF /* LocationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsTests.m; sourceTree = "<group>"; };
+		DA5EAF0817BDA4E4009AE9CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5EAF0917BDA4E4009AE9CF /* CoreLocation.framework in Frameworks */,
 				DA5EAED617BDA43E009AE9CF /* CoreGraphics.framework in Frameworks */,
 				DA5EAEDA17BDA43E009AE9CF /* CoreData.framework in Frameworks */,
 				DA5EAED817BDA43E009AE9CF /* UIKit.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		DA5EAED217BDA43E009AE9CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA5EAF0817BDA4E4009AE9CF /* CoreLocation.framework */,
 				DA5EAED317BDA43E009AE9CF /* Foundation.framework */,
 				DA5EAED517BDA43E009AE9CF /* CoreGraphics.framework */,
 				DA5EAED717BDA43E009AE9CF /* UIKit.framework */,
