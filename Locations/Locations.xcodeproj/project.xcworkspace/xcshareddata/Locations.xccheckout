@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7F2042D8-920C-4BEE-B0EA-730B40E94E44</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Locations</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8E214BAD-ADF4-4B1C-90EF-AB1C9256C08F</key>
+		<string>ssh://github.com/paulyoung/Core-Data-Tutorial-for-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Locations/Locations.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8E214BAD-ADF4-4B1C-90EF-AB1C9256C08F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/paulyoung/Core-Data-Tutorial-for-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8E214BAD-ADF4-4B1C-90EF-AB1C9256C08F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8E214BAD-ADF4-4B1C-90EF-AB1C9256C08F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>core-data-tutorial-for-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
